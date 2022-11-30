@@ -1,11 +1,17 @@
+import styled from "styled-components";
 import Header from "./components/Header";
+import GameOptions from "./components/GameOptions";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <AppWrapper>
       <Header />
-    </div>
+      <GameOptions />
+    </AppWrapper>
   );
 }
 
-export default App;
+const AppWrapper = styled.div`
+  width: 310px;
+  margin: 2rem auto;
+`;

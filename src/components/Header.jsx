@@ -18,8 +18,6 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  width: 310px;
-  margin: 2rem auto;
   padding: 0 1rem;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 5px;

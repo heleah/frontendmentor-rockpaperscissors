@@ -1,7 +1,16 @@
+import { useState } from "react";
 import styled from "styled-components";
+import RulesModal from "./RulesModal";
 
 export default function RulesButton() {
-  return <StyledButton>RULES</StyledButton>;
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  return (
+    <>
+      <StyledButton onClick={() => setModalIsOpen(true)}>RULES</StyledButton>;
+      {modalIsOpen && <RulesModal onClose={setModalIsOpen} />}
+    </>
+  );
 }
 
 const StyledButton = styled.button`
@@ -13,7 +22,6 @@ const StyledButton = styled.button`
   height: 2.5rem;
   color: #fff;
   letter-spacing: 1px;
-  background: transparent;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 10px;
 `;

@@ -40,6 +40,11 @@ export default createGlobalStyle`
     font: inherit;
   }
 
+  button {
+    background: transparent;
+    border: none;
+  }
+
   p,
   h1,
   h2,

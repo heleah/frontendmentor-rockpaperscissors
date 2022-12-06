@@ -7,7 +7,7 @@ export default function RulesButton() {
 
   return (
     <>
-      <StyledButton onClick={() => setModalIsOpen(true)}>RULES</StyledButton>;
+      <StyledButton onClick={() => setModalIsOpen(true)}>RULES</StyledButton>
       {modalIsOpen && <RulesModal onClose={setModalIsOpen} />}
     </>
   );

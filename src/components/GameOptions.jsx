@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import OptionButton from "./OptionButton";
-import { OPTIONS_COLORED } from "../utils";
+import BlueLine from "./BlueLine";
+import { OPTIONS } from "../utils";
 
 export default function GameOptions() {
   return (
     <OptionWrapper>
-      {OPTIONS_COLORED.map((option) => (
-        <OptionButton key={option.name} option={option} />
+      {OPTIONS.map((option) => (
+        <>
+          <OptionButton key={option.name} option={option} />
+          <BlueLine option={option} />
+        </>
       ))}
     </OptionWrapper>
   );

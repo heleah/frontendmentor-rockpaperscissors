@@ -17,39 +17,18 @@ const StyledButton = styled.button`
   left: ${(props) => props.option.left || null};
   display: grid;
   place-items: center;
-  height: ${(props) => props.option.dimensions};
-  width: ${(props) => props.option.dimensions};
-  background: ${(props) => props.option.background};
+  height: 100px;
+  width: 100px;
+  background: #e4e4e4;
   border-radius: 50%;
 
-  &::before,
-  &::after {
+  &::before {
     position: absolute;
     content: "";
-  }
-
-  &::before {
-    height: ${(props) => props.option.beforeDimensions};
-    width: ${(props) => props.option.beforeDimensions};
-    background: ${(props) => props.option.beforeBackground};
+    height: 130px;
+    width: 130px;
+    background: ${(props) => props.option.borderGradient};
     border-radius: 50%;
     z-index: -10;
-  }
-
-  &::after {
-    top: ${(props) => props.option.afterTop || null};
-    bottom: ${(props) => props.option.afterBottom || null};
-    right: ${(props) => props.option.afterRight || null};
-    left: ${(props) => props.option.afterLeft || null};
-    height: ${(props) => props.option.afterHeight};
-    width: ${(props) => props.option.afterWidth};
-    background: ${(props) => props.option.afterBackground};
-    transform: ${(props) => props.option.afterTransform || null};
-    z-index: -15;
-  }
-
-  img {
-    width: ${(props) => props.option.isSmall && "40px"};
-    fill: ${(props) => props.option.isSmall && "#b0b5c5"};
   }
 `;

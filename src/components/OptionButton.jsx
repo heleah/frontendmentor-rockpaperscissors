@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function OptionButton({ option }) {
+export default function OptionButton({ option, onClick }) {
   return (
     <>
-      <StyledButton option={option} className="option-button">
+      <StyledButton option={option} onClick={onClick}>
         <img src={option.icon} alt={option.name} />
       </StyledButton>
     </>
@@ -11,10 +11,6 @@ export default function OptionButton({ option }) {
 }
 
 const StyledButton = styled.button`
-  position: absolute;
-  top: ${(props) => props.option.top || null};
-  right: ${(props) => props.option.right || null};
-  left: ${(props) => props.option.left || null};
   display: grid;
   place-items: center;
   height: 100px;

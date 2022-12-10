@@ -13,6 +13,11 @@ export default function GameContainer() {
     setSelectedOption(option);
   }
 
+  function pickRandomOption() {
+    const randomIdx = Math.floor(Math.random() * 3);
+    return OPTIONS[randomIdx];
+  }
+
   return (
     <GameWrapper>
       {currentStep === "1" && (
@@ -36,7 +41,8 @@ export default function GameContainer() {
             <PickedP>YOU PICKED</PickedP>
           </PickedOption>
           <PickedOption>
-            <EmptyCircle />
+            {/* <EmptyCircle /> */}
+            <OptionButton option={pickRandomOption()} />
             <PickedP>THE HOUSE PICKED</PickedP>
           </PickedOption>
         </PickedWrapper>
@@ -61,7 +67,8 @@ const OptionWrapper = styled.div`
 const PickedWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 295px;
+  margin-left: -1rem;
+  margin-right: -1rem;
 `;
 
 const PickedOption = styled.div`

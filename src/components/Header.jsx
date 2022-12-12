@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Logo from "../assets/img/logo.svg";
 
-export default function Header() {
+export default function Header({ score }) {
   return (
     <HeaderWrapper>
       <StyledLogo src={Logo} alt="logo" />
       <ScoreBox>
         <ScoreText>SCORE</ScoreText>
-        <ScoreNo>12</ScoreNo>
+        <ScoreNo>{score}</ScoreNo>
       </ScoreBox>
     </HeaderWrapper>
   );

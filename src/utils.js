@@ -19,8 +19,7 @@ export const OPTIONS = [
     icon: ScissorsIcon,
     borderGradient:
       "linear-gradient(to bottom, hsl(39, 89%, 49%) 0%, hsl(40, 84%, 53%) 100%)",
-    right: "0",
-    afterTop: "125px",
+    afterTop: "120px",
     afterRight: "65px",
     afterHeight: "15px",
     afterWidth: "55px",
@@ -32,8 +31,6 @@ export const OPTIONS = [
     icon: RockIcon,
     borderGradient:
       "linear-gradient(to bottom, hsl(349, 71%, 52%) 0%, hsl(349, 70%, 56%) 100%)",
-    top: "150px",
-    left: "90px",
     afterTop: "115px",
     afterLeft: "65px",
     afterHeight: "15px",

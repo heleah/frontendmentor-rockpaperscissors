@@ -2,20 +2,37 @@ import { useState } from "react";
 import styled from "styled-components";
 import OptionButton from "./OptionButton";
 import BlueLine from "./BlueLine";
+import PickedScreen from "./PickedScreen";
 import { OPTIONS } from "../utils";
 
-export default function GameContainer() {
+export default function GameContainer({
+  selectedOption,
+  setSelectedOption,
+  houseOption,
+  setHouseOption,
+  gameResult,
+  setGameResult,
+}) {
   const [currentStep, setCurrentStep] = useState("1");
-  const [selectedOption, setSelectedOption] = useState();
 
   function handleOptionSelect(option) {
     setCurrentStep("2");
     setSelectedOption(option);
+    const random = pickRandomOption();
+    setHouseOption(random);
   }
 
   function pickRandomOption() {
     const randomIdx = Math.floor(Math.random() * 3);
+    setHouseOption(OPTIONS[randomIdx]);
     return OPTIONS[randomIdx];
+  }
+
+  function playAgain() {
+    setCurrentStep("1");
+    setSelectedOption("");
+    setHouseOption("");
+    setGameResult("");
   }
 
   return (
@@ -34,24 +51,26 @@ export default function GameContainer() {
           ))}
         </OptionWrapper>
       )}
+      {currentStep !== "1" && (
+        <PickedScreen
+          selectedOption={selectedOption}
+          houseOption={houseOption}
+          gameResult={gameResult}
+        />
+      )}
       {currentStep === "2" && (
-        <PickedWrapper>
-          <PickedOption>
-            <OptionButton option={selectedOption} />
-            <PickedP>YOU PICKED</PickedP>
-          </PickedOption>
-          <PickedOption>
-            {/* <EmptyCircle /> */}
-            <OptionButton option={pickRandomOption()} />
-            <PickedP>THE HOUSE PICKED</PickedP>
-          </PickedOption>
-        </PickedWrapper>
+        <>
+          <Result>{gameResult}</Result>
+          <AgainButton onClick={playAgain}>PLAY AGAIN</AgainButton>
+        </>
       )}
     </GameWrapper>
   );
 }
 
 const GameWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 5rem 1rem;
 `;
@@ -64,31 +83,26 @@ const OptionWrapper = styled.div`
   row-gap: 50px;
 `;
 
-const PickedWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-left: -1rem;
-  margin-right: -1rem;
-`;
-
-const PickedOption = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 130px;
-  gap: 30px;
-`;
-
-const PickedP = styled.p`
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 1px;
-  font-size: 10px;
-`;
-
-const EmptyCircle = styled.p`
+/* const EmptyCircle = styled.p`
   height: 100px;
   width: 100px;
   background: hsl(237, 49%, 15%);
   border-radius: 50%;
+`; */
+
+const Result = styled.p`
+  margin-top: 3rem;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+`;
+
+const AgainButton = styled.button`
+  align-self: center;
+  width: 10rem;
+  height: 2.5rem;
+  background: #fff;
+  letter-spacing: 1px;
+  border-radius: 10px;
 `;

@@ -24,4 +24,10 @@ const StyledButton = styled.button`
   letter-spacing: 1px;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 10px;
+
+  &:hover {
+    color: inherit;
+    background: #fff;
+    border: none;
+  }
 `;

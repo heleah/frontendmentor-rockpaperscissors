@@ -105,4 +105,10 @@ const AgainButton = styled.button`
   background: #fff;
   letter-spacing: 1px;
   border-radius: 10px;
+
+  &:hover {
+    color: #fff;
+    background: transparent;
+    border: 2px solid hsl(217, 16%, 45%);
+  }
 `;

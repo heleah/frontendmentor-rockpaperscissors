@@ -13,6 +13,8 @@ export const OPTIONS = [
     afterHeight: "15px",
     afterWidth: "55px",
     afterBackground: "hsl(237, 49%, 15%)",
+    deskTop: "70px",
+    deskLeft: "215px",
   },
   {
     name: "Scissors",
@@ -25,6 +27,8 @@ export const OPTIONS = [
     afterWidth: "55px",
     afterBackground: "hsl(237, 49%, 15%)",
     afterTransform: "rotate(-60deg)",
+    deskTop: "180px",
+    deskRight: "140px",
   },
   {
     name: "Rock",
@@ -37,5 +41,7 @@ export const OPTIONS = [
     afterWidth: "55px",
     afterBackground: "hsl(237, 49%, 15%)",
     afterTransform: "rotate(60deg)",
+    deskTop: "180px",
+    deskLeft: "140px",
   },
 ];

@@ -73,6 +73,10 @@ const GameWrapper = styled.div`
   flex-direction: column;
   position: relative;
   margin: 5rem 1rem;
+
+  @media only screen and (min-width: 769px) {
+    margin: 5rem 6rem;
+  }
 `;
 
 const OptionWrapper = styled.div`
@@ -81,6 +85,11 @@ const OptionWrapper = styled.div`
   justify-content: center;
   gap: 75px;
   row-gap: 50px;
+
+  @media only screen and (min-width: 769px) {
+    gap: 125px;
+    row-gap: 75px;
+  }
 `;
 
 /* const EmptyCircle = styled.p`

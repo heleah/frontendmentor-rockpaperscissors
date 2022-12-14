@@ -21,10 +21,18 @@ const HeaderWrapper = styled.header`
   padding: 0 1rem;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 5px;
+
+  @media only screen and (min-width: 769px) {
+    height: 150px;
+  }
 `;
 
 const StyledLogo = styled.img`
   height: 50px;
+
+  @media only screen and (min-width: 769px) {
+    height: 100px;
+  }
 `;
 
 const ScoreBox = styled.div`
@@ -36,12 +44,22 @@ const ScoreBox = styled.div`
   background-color: #fff;
   border-radius: 5px;
   text-align: center;
+
+  @media only screen and (min-width: 769px) {
+    height: 115px;
+    width: 150px;
+    padding: 1rem 0;
+  }
 `;
 
 const ScoreText = styled.p`
   font-size: 10px;
   color: hsl(229, 64%, 46%);
   letter-spacing: 1px;
+
+  @media only screen and (min-width: 769px) {
+    font-size: 12px;
+  }
 `;
 
 const ScoreNo = styled.p`
@@ -49,4 +67,8 @@ const ScoreNo = styled.p`
   font-weight: bold;
   color: hsl(229, 25%, 31%);
   letter-spacing: -2px;
+
+  @media only screen and (min-width: 769px) {
+    font-size: 48px;
+  }
 `;

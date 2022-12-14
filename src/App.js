@@ -64,4 +64,8 @@ const AppWrapper = styled.div`
   justify-content: space-between;
   width: 310px;
   margin: 2rem auto;
+
+  @media only screen and (min-width: 769px) {
+    width: 710px;
+  }
 `;

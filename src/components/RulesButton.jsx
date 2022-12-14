@@ -30,4 +30,9 @@ const StyledButton = styled.button`
     background: #fff;
     border: none;
   }
+
+  @media only screen and (min-width: 769px) {
+    left: initial;
+    right: 0;
+  } ;
 `;

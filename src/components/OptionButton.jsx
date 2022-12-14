@@ -27,4 +27,18 @@ const StyledButton = styled.button`
     border-radius: 50%;
     z-index: -10;
   }
+
+  @media only screen and (min-width: 769px) {
+    height: 150px;
+    width: 150px;
+
+    &::before {
+      height: 200px;
+      width: 200px;
+    }
+
+    img {
+      height: 75px;
+    }
+  }
 `;

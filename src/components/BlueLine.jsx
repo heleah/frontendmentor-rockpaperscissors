@@ -15,4 +15,11 @@ const Line = styled.span`
   background: hsl(237, 49%, 15%);
   transform: ${(props) => props.option.afterTransform || null};
   z-index: -15;
+
+  @media only screen and (min-width: 769px) {
+    top: ${(props) => props.option.deskTop || null};
+    right: ${(props) => props.option.deskRight || null};
+    left: ${(props) => props.option.deskLeft || null};
+    width: 85px;
+  }
 `;

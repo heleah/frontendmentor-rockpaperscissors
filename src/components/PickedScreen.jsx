@@ -34,6 +34,12 @@ const PickedOption = styled.div`
   align-items: center;
   width: 130px;
   gap: 30px;
+
+  @media only screen and (min-width: 769px) {
+    flex-direction: column-reverse;
+    gap: 100px;
+    width: 300px;
+  }
 `;
 
 const PickedP = styled.p`
@@ -41,4 +47,8 @@ const PickedP = styled.p`
   color: #fff;
   letter-spacing: 1px;
   font-size: 10px;
+
+  @media only screen and (min-width: 769px) {
+    font-size: 24px;
+  }
 `;

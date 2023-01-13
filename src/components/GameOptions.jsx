@@ -59,10 +59,10 @@ export default function GameContainer({
         />
       )}
       {currentStep === "2" && (
-        <>
+        <FadingIn>
           <Result>{gameResult}</Result>
           <AgainButton onClick={playAgain}>PLAY AGAIN</AgainButton>
-        </>
+        </FadingIn>
       )}
     </GameWrapper>
   );
@@ -92,13 +92,6 @@ const OptionWrapper = styled.div`
   }
 `;
 
-/* const EmptyCircle = styled.p`
-  height: 100px;
-  width: 100px;
-  background: hsl(237, 49%, 15%);
-  border-radius: 50%;
-`; */
-
 const Result = styled.p`
   margin-top: 3rem;
   font-size: 3rem;
@@ -119,5 +112,22 @@ const AgainButton = styled.button`
     color: #fff;
     background: transparent;
     border: 2px solid hsl(217, 16%, 45%);
+  }
+`;
+
+const FadingIn = styled.div`
+  text-align: center;
+  animation: fadingIn 4s ease-in;
+
+  @keyframes fadingIn {
+    0% {
+      opacity: 0%;
+    }
+    30% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
   }
 `;

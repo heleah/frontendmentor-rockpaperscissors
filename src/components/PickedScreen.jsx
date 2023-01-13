@@ -13,8 +13,9 @@ export default function PickedScreen({
         <PickedP>YOU PICKED</PickedP>
       </PickedOption>
       <PickedOption>
-        {/* <EmptyCircle /> */}
-        <OptionButton option={houseOption} />
+        <FadeIn>
+          <OptionButton option={houseOption} />
+        </FadeIn>
         <PickedP>THE HOUSE PICKED</PickedP>
       </PickedOption>
     </PickedWrapper>
@@ -50,5 +51,18 @@ const PickedP = styled.p`
 
   @media only screen and (min-width: 769px) {
     font-size: 24px;
+  }
+`;
+
+const FadeIn = styled.div`
+  animation: fadeIn 3s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
   }
 `;

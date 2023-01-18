@@ -28,10 +28,9 @@ Users should be able to:
 ![mobile screenshot](./src/assets/img/rps_mobile.png)
 ![desktop screenshot](./src/assets/img/rps_desktop.png)
 
-<!-- ### Links
+### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Live Site URL: [View on Vercel](https://frontendmentor-rockpaperscissors-smoky.vercel.app/)
 
 ### Built with
 

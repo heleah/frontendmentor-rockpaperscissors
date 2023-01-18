@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Header from "./components/Header";
-import GameContainer from "./components/GameOptions";
+import GameContainer from "./components/GameContainer";
 import RulesButton from "./components/RulesButton";
 
 export default function App() {
@@ -36,8 +36,10 @@ export default function App() {
         return;
     }
     setGameResult(result);
-    if (result === "YOU WIN") setScore(score + 1);
-    if (result === "YOU LOSE" && score > 0) setScore(score - 1);
+    setTimeout(() => {
+      if (result === "YOU WIN") setScore(score + 1);
+      if (result === "YOU LOSE" && score > 0) setScore(score - 1);
+    }, 2000);
   }
 
   return (
@@ -50,8 +52,6 @@ export default function App() {
         setHouseOption={setHouseOption}
         gameResult={gameResult}
         setGameResult={setGameResult}
-        score={score}
-        setScore={setScore}
       />
       <RulesButton />
     </AppWrapper>

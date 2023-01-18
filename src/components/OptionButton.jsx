@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function OptionButton({ option, onClick }) {
+export default function OptionButton({ option, onClick, isClickable }) {
   return (
     <>
-      <StyledButton option={option} onClick={onClick}>
+      <StyledButton option={option} onClick={onClick} isClickable={isClickable}>
         <img src={option.icon} alt={option.name} />
       </StyledButton>
     </>
@@ -17,6 +17,8 @@ const StyledButton = styled.button`
   width: 100px;
   background: #e4e4e4;
   border-radius: 50%;
+
+  cursor: ${(props) => (props.isClickable === false ? "default" : "pointer")};
 
   &::before {
     position: absolute;

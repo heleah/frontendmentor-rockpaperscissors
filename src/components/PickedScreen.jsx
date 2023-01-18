@@ -9,12 +9,12 @@ export default function PickedScreen({
   return (
     <PickedWrapper>
       <PickedOption>
-        <OptionButton option={selectedOption} />
+        <OptionButton option={selectedOption} isClickable={false} />
         <PickedP>YOU PICKED</PickedP>
       </PickedOption>
       <PickedOption>
         <FadeIn>
-          <OptionButton option={houseOption} />
+          <OptionButton option={houseOption} isClickable={false} />
         </FadeIn>
         <PickedP>THE HOUSE PICKED</PickedP>
       </PickedOption>

@@ -1,6 +1,6 @@
-import RockIcon from "./assets/img/icon-rock.svg";
-import PaperIcon from "./assets/img/icon-paper.svg";
-import ScissorsIcon from "./assets/img/icon-scissors.svg";
+import RockIcon from "../assets/img/icon-rock.svg";
+import PaperIcon from "../assets/img/icon-paper.svg";
+import ScissorsIcon from "../assets/img/icon-scissors.svg";
 
 export const OPTIONS = [
   {

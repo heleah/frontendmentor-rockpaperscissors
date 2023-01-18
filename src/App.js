@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { saveToLocal, loadFromLocal } from "./lib/localStorage";
 import Header from "./components/Header";
 import GameContainer from "./components/GameContainer";
 import RulesButton from "./components/RulesButton";
@@ -8,7 +9,11 @@ export default function App() {
   const [selectedOption, setSelectedOption] = useState("");
   const [houseOption, setHouseOption] = useState("");
   const [gameResult, setGameResult] = useState("");
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(loadFromLocal("Score") ?? 0);
+
+  useEffect(() => {
+    saveToLocal("Score", score);
+  }, [score]);
 
   useEffect(() => {
     calcResult();

@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import OptionButton from "./OptionButton";
 
-export default function PickedScreen({
-  selectedOption,
-  houseOption,
-  gameResult,
-}) {
+export default function PickedScreen({ selectedOption, houseOption }) {
   return (
     <PickedWrapper>
       <PickedOption>

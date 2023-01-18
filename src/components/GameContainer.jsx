@@ -3,7 +3,7 @@ import styled from "styled-components";
 import OptionButton from "./OptionButton";
 import BlueLine from "./BlueLine";
 import PickedScreen from "./PickedScreen";
-import { OPTIONS } from "../utils";
+import { OPTIONS } from "../lib/utils";
 
 export default function GameContainer({
   selectedOption,
